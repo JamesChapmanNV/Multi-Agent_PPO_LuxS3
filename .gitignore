@@ -3,3 +3,11 @@ __pycache__
 episodes/
 .vscode/
 replays/
+old/
+outputs/
+__pycache__/
+MAPPO_agent.py
+MAPPO_models.py
+MAPPO_obs.py
+
+

@@ -77,9 +77,9 @@ class Node:
             return
         # We will only find relics in our part of the map
         ##############################################################
-        if (self.y + self.x) < 30:
-            self._explored_for_relic = False
-            return
+        # if (self.y + self.x) < 30:
+        #     self._explored_for_relic = False
+        #     return
         ##############################################################
         self._relic = status
         self._explored_for_relic = True
@@ -96,9 +96,9 @@ class Node:
             return
         # We will only find relics in our part of the map
         ##############################################################
-        if (self.y + self.x) < 30:
-            self._explored_for_reward = False
-            return
+        # if (self.y + self.x) < 30:
+        #     self._explored_for_reward = False
+        #     return
         ##############################################################
         self._reward = status
         self._explored_for_reward = True

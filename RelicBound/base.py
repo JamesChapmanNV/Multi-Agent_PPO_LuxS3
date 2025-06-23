@@ -15,23 +15,27 @@ class Global:
     LAST_MATCH_STEP_WHEN_RELIC_CAN_APPEAR = 50
     LAST_MATCH_WHEN_RELIC_CAN_APPEAR = 2
 
-    # We will find the exact value of these constants during the game
-    # UNIT_MOVE_COST = 1  # OPTIONS: list(range(1, 6))
-    # UNIT_SAP_COST = 30  # OPTIONS: list(range(30, 51))
-    # UNIT_SAP_RANGE = 3  # OPTIONS: list(range(3, 8))
-    # UNIT_SENSOR_RANGE = 2  # OPTIONS: [1, 2, 3, 4]
-    # OBSTACLE_MOVEMENT_PERIOD = 20  # OPTIONS: 6.67, 10, 20, 40
-    # OBSTACLE_MOVEMENT_DIRECTION = (0, 0)  # OPTIONS: [(1, -1), (-1, 1)]
-
     # We will NOT find the exact value of these constants during the game
     NEBULA_ENERGY_REDUCTION = 5  # OPTIONS: [0, 1, 2, 3, 5, 25]
 
+    # # The energy on the unknown tiles will be used in the pathfinding
+    HIDDEN_NODE_ENERGY = 0
+
+    # We will find the exact value of these constants during the game
+    UNIT_MOVE_COST = 1  # OPTIONS: list(range(1, 6))
+    UNIT_SAP_COST = 30  # OPTIONS: list(range(30, 51))
+    UNIT_SAP_RANGE = 3  # OPTIONS: list(range(3, 8))
+    UNIT_SENSOR_RANGE = 2  # OPTIONS: [1, 2, 3, 4]
+    OBSTACLE_MOVEMENT_PERIOD = 20  # OPTIONS: 6.67, 10, 20, 40
+    OBSTACLE_MOVEMENT_DIRECTION = (0, 0)  # OPTIONS: [(1, -1), (-1, 1)]
+
+
     # Exploration flags:
 
-    # ALL_RELICS_FOUND = False
-    # ALL_REWARDS_FOUND = False
-    # OBSTACLE_MOVEMENT_PERIOD_FOUND = False
-    # OBSTACLE_MOVEMENT_DIRECTION_FOUND = False
+    ALL_RELICS_FOUND = False
+    ALL_REWARDS_FOUND = False
+    OBSTACLE_MOVEMENT_PERIOD_FOUND = False
+    OBSTACLE_MOVEMENT_DIRECTION_FOUND = False
 
     # Game logs:
 
@@ -40,19 +44,16 @@ class Global:
     # - "nodes": A set of nodes where our ships were located.
     # - "points": The number of points scored at that location.
     # This data will help identify which nodes yield points.
-    # REWARD_RESULTS = []
+    REWARD_RESULTS = []
 
     # obstacles_movement_status: list of bool
     # A history log of obstacle (asteroids and nebulae) movement events.
     # - `True`: The ships' sensors detected a change in the obstacles' positions at this step.
     # - `False`: The sensors did not detect any changes.
     # This information will be used to determine the speed and direction of obstacle movement.
-    # OBSTACLES_MOVEMENT_STATUS = []
+    OBSTACLES_MOVEMENT_STATUS = []
 
-    # Others:
-
-    # The energy on the unknown tiles will be used in the pathfinding
-    HIDDEN_NODE_ENERGY = 0
+    # # Others:
 
 
 SPACE_SIZE = Global.SPACE_SIZE
